@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/snt-official/static/css/main.1a7488ce.css",
-    "main.js": "/snt-official/static/js/main.2829e846.js",
+    "main.js": "/snt-official/static/js/main.50cfc8b7.js",
     "static/media/small-countryhouse.jpg": "/snt-official/static/media/small-countryhouse.e36e9e907783bc3ae9bb.jpg",
     "index.html": "/snt-official/index.html",
     "main.1a7488ce.css.map": "/snt-official/static/css/main.1a7488ce.css.map",
-    "main.2829e846.js.map": "/snt-official/static/js/main.2829e846.js.map"
+    "main.50cfc8b7.js.map": "/snt-official/static/js/main.50cfc8b7.js.map"
   },
   "entrypoints": [
     "static/css/main.1a7488ce.css",
-    "static/js/main.2829e846.js"
+    "static/js/main.50cfc8b7.js"
   ]
 }
