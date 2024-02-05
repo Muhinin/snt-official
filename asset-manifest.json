@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/snt-official/static/css/main.f855e6bc.css",
+    "main.js": "/snt-official/static/js/main.fc0e337f.js",
+    "static/js/592.4f0204bb.chunk.js": "/snt-official/static/js/592.4f0204bb.chunk.js",
+    "static/media/logo.svg": "/snt-official/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/snt-official/index.html",
+    "main.f855e6bc.css.map": "/snt-official/static/css/main.f855e6bc.css.map",
+    "main.fc0e337f.js.map": "/snt-official/static/js/main.fc0e337f.js.map",
+    "592.4f0204bb.chunk.js.map": "/snt-official/static/js/592.4f0204bb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.fc0e337f.js"
+  ]
+}
