@@ -4,15 +4,15 @@ import App from "./App";
 import "./index.css";
 import {
   HashRouter,
-  RouterProvider,
-  createBrowserRouter,
+  Route,
+  Routes,
 } from "react-router-dom";
 import Contacts from "./routes/Contacts";
 import Maps from "./routes/Maps";
 import Documents from "./routes/Docs";
 import Payment from "./routes/Payment";
 
-const router = createBrowserRouter([
+const routes = [
   {
     path: "/",
     element: <App />,
@@ -33,15 +33,19 @@ const router = createBrowserRouter([
     path: "/payment",
     element: <Payment />,
   },
-]);
+];
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
-  <HashRouter>
-    <React.StrictMode>
-      <RouterProvider router={router} />
-    </React.StrictMode>
-  </HashRouter>
+  <React.StrictMode>
+    <HashRouter>
+      <Routes>
+        {routes.map((route) => (
+          <Route path={route.path} element={route.element} />
+        ))}
+      </Routes>
+    </HashRouter>
+  </React.StrictMode>
 );
