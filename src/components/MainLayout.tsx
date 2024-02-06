@@ -1,13 +1,24 @@
-import React, { FC, ReactNode } from "react";
-import { Layout, Menu, MenuProps, Typography } from "antd";
 import { Footer, Header } from "antd/es/layout/layout";
-import Title from "antd/es/typography/Title";
 import { Link, useNavigate } from "react-router-dom";
+import { Flex, Image, Layout, Menu } from "antd";
+import React, { FC, ReactNode } from "react";
+import Title from "antd/es/typography/Title";
+
+import ReactRouterIcon from "../assets/icons/ReactRouterIcon";
+import Paragraph from "antd/es/typography/Paragraph";
+import ReactIcon from "../assets/icons/ReactIcon";
+import AntDIcon from "../assets/icons/AntDIcon";
 
 interface IMainLayout {
   activePage?: string;
   children: ReactNode;
 }
+
+const FooterLinks = [
+  { component: <ReactIcon />, url: "https://react.dev/" },
+  { component: <AntDIcon />, url: "https://ant.design/" },
+  { component: <ReactRouterIcon />, url: "https://reactrouter.com/" },
+];
 
 const navMenuItems = [
   { url: "contacts", label: "Контакты" },
@@ -21,8 +32,8 @@ const MainLayout: FC<IMainLayout> = ({ activePage, children }) => {
 
   return (
     <Layout>
-      <Header>
-        <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+      <Header style={{ position: "sticky", top: 0, zIndex: 1 }}>
+        <Flex align="center" gap={16}>
           <Title
             style={{
               color: "white",
@@ -46,18 +57,29 @@ const MainLayout: FC<IMainLayout> = ({ activePage, children }) => {
               </Menu.Item>
             ))}
           </Menu>
-        </div>
+        </Flex>
       </Header>
-      <div
-        style={{
-          height: "calc(100vh - 128px)",
-          maxWidth: 1200,
-          margin: "0 auto",
-        }}
+      <Flex
+        align={"center"}
+        vertical
+        style={{ margin: "0 auto", maxWidth: 1200, padding: "32px 0" }}
       >
         {children}
-      </div>
-      <Footer>Footer</Footer>
+      </Flex>
+      <Footer style={{ backgroundColor: "#111a2c" }}>
+        <div style={{ maxWidth: 1200, width: "100%", margin: "0 auto" }}>
+          <Paragraph style={{ color: "#fff" }}>
+            Приложение находится в разработке
+          </Paragraph>
+          <Flex gap={16} justify="center">
+            {FooterLinks.map((link) => (
+              <Link to={link.url} target="_blank" rel="moopener noreferrer">
+                {link.component}
+              </Link>
+            ))}
+          </Flex>
+        </div>
+      </Footer>
     </Layout>
   );
 };
